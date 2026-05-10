@@ -1,23 +1,48 @@
-# Quick Start
-This project uses uv for lightning-fast dependency management.
+## Quick Start
 
-1. Install uv
-If you don't have uv installed:
+This project uses **[uv](https://github.com/astral-sh/uv)** for lightning-fast dependency management and environment handling.
 
-# Pythonic Way (CMD)
-`pip install uv`
+---
 
-# macOS/Linux
-`curl -LsSf https://astral.sh/uv/install.sh | sh`
+### 1. Install `uv`
 
+If you don't have `uv` installed, use one of the following methods:
 
-# Windows
-`powershell -ExecutionPolicy ByRef -c "irm https://astral.sh/uv/install.ps1 | iex"`
+#### **Pythonic Way (PIP)**
 
+```bash
+pip install uv
 
-2. Setup and Run
-You don't even need to create a virtual environment manually. Just run:
+```
 
-`uv run fastapi dev main.py`
+#### **macOS / Linux**
 
-uv will automatically create a .venv, install the exact dependencies from uv.lock, and start the server.
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+```
+
+#### **Windows**
+
+```powershell
+powershell -ExecutionPolicy ByRef -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+```
+
+---
+
+### 2. Setup and Run
+
+You do **not** need to create a virtual environment manually. `uv` handles everything with a single command:
+
+```bash
+uv run fastapi dev main.py
+
+```
+
+> **Note:** When you run this, `uv` will automatically:
+> * Create a `.venv` (virtual environment).
+> * Install the exact dependencies from the `uv.lock` file.
+> * Start the FastAPI development server.
+> 
+>
